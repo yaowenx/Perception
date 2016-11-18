@@ -1,0 +1,2 @@
+amr-ros-config/description:amr-ros-config/gazebo:amr-ros-config/launch:p3at_controller
+-DCATKIN_DEVEL_PREFIX=/home/yaowen/Desktop/project/ws/devel -DCMAKE_INSTALL_PREFIX=/home/yaowen/Desktop/project/ws/install -G Unix Makefiles
