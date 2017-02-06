@@ -1,8 +1,8 @@
-# Install script for directory: /home/yaowen/Desktop/project/ws/src/amr-ros-config/description
+# Install script for directory: /home/yaowen/Desktop/ws/Perception/src/amr-ros-config/description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yaowen/Desktop/project/ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yaowen/Desktop/ws/Perception/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yaowen/Desktop/project/ws/build/amr-ros-config/description/catkin_generated/installspace/amr_robots_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/yaowen/Desktop/ws/Perception/build/amr-ros-config/description/catkin_generated/installspace/amr_robots_description.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_robots_description/cmake" TYPE FILE FILES
-    "/home/yaowen/Desktop/project/ws/build/amr-ros-config/description/catkin_generated/installspace/amr_robots_descriptionConfig.cmake"
-    "/home/yaowen/Desktop/project/ws/build/amr-ros-config/description/catkin_generated/installspace/amr_robots_descriptionConfig-version.cmake"
+    "/home/yaowen/Desktop/ws/Perception/build/amr-ros-config/description/catkin_generated/installspace/amr_robots_descriptionConfig.cmake"
+    "/home/yaowen/Desktop/ws/Perception/build/amr-ros-config/description/catkin_generated/installspace/amr_robots_descriptionConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_robots_description" TYPE FILE FILES "/home/yaowen/Desktop/project/ws/src/amr-ros-config/description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/amr_robots_description" TYPE FILE FILES "/home/yaowen/Desktop/ws/Perception/src/amr-ros-config/description/package.xml")
 endif()
 

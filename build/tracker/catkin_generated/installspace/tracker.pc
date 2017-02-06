@@ -1,0 +1,8 @@
+prefix=/home/yaowen/Desktop/ws/Perception/install
+
+Name: tracker
+Description: Description of tracker
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/yaowen/Desktop/ws/Perception/install/lib 
+Requires: 

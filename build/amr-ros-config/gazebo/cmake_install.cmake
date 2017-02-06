@@ -1,8 +1,8 @@
-# Install script for directory: /home/yaowen/Desktop/project/ws/src/amr-ros-config/gazebo
+# Install script for directory: /home/yaowen/Desktop/ws/Perception/src/amr-ros-config/gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/yaowen/Desktop/project/ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/yaowen/Desktop/ws/Perception/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

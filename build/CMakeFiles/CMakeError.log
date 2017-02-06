@@ -1,25 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/yaowen/Desktop/ws/Perception/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec3293377866/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3293377866.dir/build.make CMakeFiles/cmTryCompileExec3293377866.dir/build
-make[1]: Entering directory '/home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3293377866.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3293377866.dir/CheckSymbolExists.c.o   -c /home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec3293377866
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3293377866.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec3293377866.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3293377866 -rdynamic 
-CMakeFiles/cmTryCompileExec3293377866.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_f10e2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f10e2.dir/build.make CMakeFiles/cmTC_f10e2.dir/build
+make[1]: Entering directory '/home/yaowen/Desktop/ws/Perception/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f10e2.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_f10e2.dir/CheckSymbolExists.c.o   -c /home/yaowen/Desktop/ws/Perception/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_f10e2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f10e2.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_f10e2.dir/CheckSymbolExists.c.o  -o cmTC_f10e2 -rdynamic 
+CMakeFiles/cmTC_f10e2.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTryCompileExec3293377866.dir/build.make:88: recipe for target 'cmTryCompileExec3293377866' failed
-make[1]: Leaving directory '/home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec3293377866] Error 1
-Makefile:118: recipe for target 'cmTryCompileExec3293377866/fast' failed
-make: *** [cmTryCompileExec3293377866/fast] Error 2
+CMakeFiles/cmTC_f10e2.dir/build.make:97: recipe for target 'cmTC_f10e2' failed
+make[1]: *** [cmTC_f10e2] Error 1
+make[1]: Leaving directory '/home/yaowen/Desktop/ws/Perception/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f10e2/fast' failed
+make: *** [cmTC_f10e2/fast] Error 2
 
-File /home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/yaowen/Desktop/ws/Perception/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -35,23 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/yaowen/Desktop/ws/Perception/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec406144274/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec406144274.dir/build.make CMakeFiles/cmTryCompileExec406144274.dir/build
-make[1]: Entering directory '/home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec406144274.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec406144274.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.0/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec406144274
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec406144274.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec406144274.dir/CheckFunctionExists.c.o  -o cmTryCompileExec406144274 -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_cda24/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cda24.dir/build.make CMakeFiles/cmTC_cda24.dir/build
+make[1]: Entering directory '/home/yaowen/Desktop/ws/Perception/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cda24.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cda24.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cda24
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cda24.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_cda24.dir/CheckFunctionExists.c.o  -o cmTC_cda24 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTryCompileExec406144274.dir/build.make:88: recipe for target 'cmTryCompileExec406144274' failed
-make[1]: Leaving directory '/home/yaowen/Desktop/project/ws/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec406144274] Error 1
-Makefile:118: recipe for target 'cmTryCompileExec406144274/fast' failed
-make: *** [cmTryCompileExec406144274/fast] Error 2
+CMakeFiles/cmTC_cda24.dir/build.make:97: recipe for target 'cmTC_cda24' failed
+make[1]: *** [cmTC_cda24] Error 1
+make[1]: Leaving directory '/home/yaowen/Desktop/ws/Perception/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_cda24/fast' failed
+make: *** [cmTC_cda24/fast] Error 2
 
 

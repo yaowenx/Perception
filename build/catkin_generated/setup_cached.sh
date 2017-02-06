@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/yaowen/Desktop/project/ws/build"
+export PWD="/home/yaowen/Desktop/ws/Perception/build"

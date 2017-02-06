@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yaowen/Desktop/project/ws/src
+CMAKE_SOURCE_DIR = /home/yaowen/Desktop/ws/Perception/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yaowen/Desktop/project/ws/build
+CMAKE_BINARY_DIR = /home/yaowen/Desktop/ws/Perception/build
 
 # Utility rule file for nav_msgs_generate_messages_cpp.
 
@@ -56,10 +56,10 @@ p3at_controller/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build: nav_msgs_ge
 .PHONY : p3at_controller/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
 
 p3at_controller/CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean:
-	cd /home/yaowen/Desktop/project/ws/build/p3at_controller && $(CMAKE_COMMAND) -P CMakeFiles/nav_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/yaowen/Desktop/ws/Perception/build/p3at_controller && $(CMAKE_COMMAND) -P CMakeFiles/nav_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : p3at_controller/CMakeFiles/nav_msgs_generate_messages_cpp.dir/clean
 
 p3at_controller/CMakeFiles/nav_msgs_generate_messages_cpp.dir/depend:
-	cd /home/yaowen/Desktop/project/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaowen/Desktop/project/ws/src /home/yaowen/Desktop/project/ws/src/p3at_controller /home/yaowen/Desktop/project/ws/build /home/yaowen/Desktop/project/ws/build/p3at_controller /home/yaowen/Desktop/project/ws/build/p3at_controller/CMakeFiles/nav_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yaowen/Desktop/ws/Perception/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaowen/Desktop/ws/Perception/src /home/yaowen/Desktop/ws/Perception/src/p3at_controller /home/yaowen/Desktop/ws/Perception/build /home/yaowen/Desktop/ws/Perception/build/p3at_controller /home/yaowen/Desktop/ws/Perception/build/p3at_controller/CMakeFiles/nav_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : p3at_controller/CMakeFiles/nav_msgs_generate_messages_cpp.dir/depend
 

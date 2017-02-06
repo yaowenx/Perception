@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yaowen/Desktop/project/ws/src
+CMAKE_SOURCE_DIR = /home/yaowen/Desktop/ws/Perception/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yaowen/Desktop/project/ws/build
+CMAKE_BINARY_DIR = /home/yaowen/Desktop/ws/Perception/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,14 +124,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/yaowen/Desktop/project/ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yaowen/Desktop/project/ws/build/CMakeFiles /home/yaowen/Desktop/project/ws/build/amr-ros-config/description/CMakeFiles/progress.marks
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yaowen/Desktop/project/ws/build/CMakeFiles 0
+	cd /home/yaowen/Desktop/ws/Perception/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/yaowen/Desktop/ws/Perception/build/CMakeFiles /home/yaowen/Desktop/ws/Perception/build/amr-ros-config/description/CMakeFiles/progress.marks
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yaowen/Desktop/ws/Perception/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/clean
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/clean
 .PHONY : clean
 
 # The main clean target
@@ -140,22 +140,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/preinstall
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/preinstall
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/yaowen/Desktop/project/ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/yaowen/Desktop/ws/Perception/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -164,12 +164,12 @@ actionlib_generate_messages_cpp: amr-ros-config/description/CMakeFiles/actionlib
 
 # fast build rule for target.
 actionlib_generate_messages_cpp/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -178,12 +178,12 @@ actionlib_generate_messages_eus: amr-ros-config/description/CMakeFiles/actionlib
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_eus.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_eus.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_eus.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ actionlib_generate_messages_lisp: amr-ros-config/description/CMakeFiles/actionli
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -206,12 +206,12 @@ actionlib_generate_messages_nodejs: amr-ros-config/description/CMakeFiles/action
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_py.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/actionlib_generate_messages_py.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/actionlib_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -220,82 +220,12 @@ actionlib_generate_messages_py: amr-ros-config/description/CMakeFiles/actionlib_
 
 # fast build rule for target.
 actionlib_generate_messages_py/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_py.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_py.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/actionlib_generate_messages_py.dir/build.make amr-ros-config/description/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
 # Convenience name for target.
-amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make amr-ros-config/description/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -304,12 +234,12 @@ tf2_msgs_generate_messages_cpp: amr-ros-config/description/CMakeFiles/tf2_msgs_g
 
 # fast build rule for target.
 tf2_msgs_generate_messages_cpp/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -318,12 +248,12 @@ tf2_msgs_generate_messages_eus: amr-ros-config/description/CMakeFiles/tf2_msgs_g
 
 # fast build rule for target.
 tf2_msgs_generate_messages_eus/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 .PHONY : tf2_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -332,12 +262,12 @@ tf2_msgs_generate_messages_lisp: amr-ros-config/description/CMakeFiles/tf2_msgs_
 
 # fast build rule for target.
 tf2_msgs_generate_messages_lisp/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -346,12 +276,12 @@ tf2_msgs_generate_messages_nodejs: amr-ros-config/description/CMakeFiles/tf2_msg
 
 # fast build rule for target.
 tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 .PHONY : tf2_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f CMakeFiles/Makefile2 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 .PHONY : amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -360,7 +290,7 @@ tf2_msgs_generate_messages_py: amr-ros-config/description/CMakeFiles/tf2_msgs_ge
 
 # fast build rule for target.
 tf2_msgs_generate_messages_py/fast:
-	cd /home/yaowen/Desktop/project/ws/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+	cd /home/yaowen/Desktop/ws/Perception/build && $(MAKE) -f amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 # Help Target
@@ -380,11 +310,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_eus"
@@ -402,6 +327,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/yaowen/Desktop/project/ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/yaowen/Desktop/ws/Perception/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,0 +1,8 @@
+prefix=/home/yaowen/Desktop/ws/Perception/devel
+
+Name: segment_msgs
+Description: Description of segment_msgs
+Version: 0.0.0
+Cflags: -I/home/yaowen/Desktop/ws/Perception/devel/include
+Libs: -L/home/yaowen/Desktop/ws/Perception/devel/lib 
+Requires: 

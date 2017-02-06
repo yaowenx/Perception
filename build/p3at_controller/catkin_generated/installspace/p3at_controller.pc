@@ -1,8 +1,8 @@
-prefix=/home/yaowen/Desktop/project/ws/install
+prefix=/home/yaowen/Desktop/ws/Perception/install
 
 Name: p3at_controller
 Description: Description of p3at_controller
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/yaowen/Desktop/project/ws/install/lib 
+Libs: -L/home/yaowen/Desktop/ws/Perception/install/lib 
 Requires: 

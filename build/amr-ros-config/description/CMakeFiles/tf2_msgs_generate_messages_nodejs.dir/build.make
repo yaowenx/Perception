@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yaowen/Desktop/project/ws/src
+CMAKE_SOURCE_DIR = /home/yaowen/Desktop/ws/Perception/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yaowen/Desktop/project/ws/build
+CMAKE_BINARY_DIR = /home/yaowen/Desktop/ws/Perception/build
 
 # Utility rule file for tf2_msgs_generate_messages_nodejs.
 
@@ -56,10 +56,10 @@ amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/buil
 .PHONY : amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
 
 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/yaowen/Desktop/project/ws/build/amr-ros-config/description && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/yaowen/Desktop/ws/Perception/build/amr-ros-config/description && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
 
 amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/yaowen/Desktop/project/ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaowen/Desktop/project/ws/src /home/yaowen/Desktop/project/ws/src/amr-ros-config/description /home/yaowen/Desktop/project/ws/build /home/yaowen/Desktop/project/ws/build/amr-ros-config/description /home/yaowen/Desktop/project/ws/build/amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/yaowen/Desktop/ws/Perception/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/yaowen/Desktop/ws/Perception/src /home/yaowen/Desktop/ws/Perception/src/amr-ros-config/description /home/yaowen/Desktop/ws/Perception/build /home/yaowen/Desktop/ws/Perception/build/amr-ros-config/description /home/yaowen/Desktop/ws/Perception/build/amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : amr-ros-config/description/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/depend
 

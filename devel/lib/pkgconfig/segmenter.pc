@@ -1,0 +1,8 @@
+prefix=/home/yaowen/Desktop/ws/Perception/devel
+
+Name: segmenter
+Description: Description of segmenter
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/yaowen/Desktop/ws/Perception/devel/lib -lsegmenter
+Requires: roscpp sensor_msgs segment_msgs
