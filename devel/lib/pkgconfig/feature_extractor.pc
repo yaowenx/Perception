@@ -1,8 +1,0 @@
-prefix=/home/yaowen/Desktop/ws/Perception/devel
-
-Name: feature_extractor
-Description: Description of feature_extractor
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/yaowen/Desktop/ws/Perception/devel/lib 
-Requires: 

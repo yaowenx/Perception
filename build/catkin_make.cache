@@ -1,2 +1,0 @@
-a4bot:a4bot_controller:amr-ros-config/description:amr-ros-config/gazebo:amr-ros-config/launch:feature_extractor:object_msgs:p3at_controller:segment_msgs:segmenter:tracker
--DCATKIN_DEVEL_PREFIX=/home/yaowen/Desktop/ws/Perception/devel -DCMAKE_INSTALL_PREFIX=/home/yaowen/Desktop/ws/Perception/install -G Unix Makefiles

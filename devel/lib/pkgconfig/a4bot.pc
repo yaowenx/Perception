@@ -1,8 +1,0 @@
-prefix=/home/yaowen/Desktop/ws/Perception/devel
-
-Name: a4bot
-Description: Description of a4bot
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/yaowen/Desktop/ws/Perception/devel/lib 
-Requires: 

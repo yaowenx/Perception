@@ -1,8 +1,0 @@
-prefix=/home/yaowen/Desktop/ws/Perception/install
-
-Name: object_msgs
-Description: Description of object_msgs
-Version: 0.0.0
-Cflags: -I/home/yaowen/Desktop/ws/Perception/install/include
-Libs: -L/home/yaowen/Desktop/ws/Perception/install/lib 
-Requires: 
