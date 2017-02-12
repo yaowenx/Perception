@@ -39,10 +39,10 @@ void Segment::laserCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
 
   mat A;
   A << 1 << angle_increment << endr
-    << 0 << 1 << endr;
+  << 0 << 1 << endr;
   mat Q;
   Q << 0.01 << 0 << endr
-    << 0 << 0.01 << endr;
+  << 0 << 0.01 << endr;
   mat C;
   C << 1 << 0 << endr;
 
@@ -60,24 +60,30 @@ void Segment::laserCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
 
     if (i_m == i) {
       x_hat << ranges[i] << endr << 0 << endr;
-    //  cout << x_hat << endl;
+      //  cout << x_hat << endl;
       p_hat << std::pow(1 / std::tan(10*3.14159265/180) * ranges[i] * angle_increment, 2)
       << 0 << endr << 0 << std::pow(1 / std::tan(10*3.14159265/180) * ranges[i], 2) << endr;
-      //cout << i_m << endl;
-      if (ranges[i_m] > range_max & i_m != 0) {
-        breakPointIt.push_back(i_m-1);
+
+      if (i_m != 0) {
+        if (ranges[i_m] > range_max) {
+          breakPointIt.push_back(i_m-1);
+        }
+        else if (ranges[i_m-1] < range_max) {
+          breakPointIt.push_back(i_m-1);
+          breakPointIt.push_back(i_m);
+        }
+        else {
+          breakPointIt.push_back(i_m);
+        }
       }
-      else {
-        if (ranges[i_m-1] < range_max & i_m != 0) breakPointIt.push_back(i_m-1);
+      else if ( ranges[i_m] < range_max) {
         breakPointIt.push_back(i_m);
       }
     }
     else {
-    //  cout << A << endl;
       x_hat = A * x_hat;
-    //  cout << x_hat << endl;
       p_hat = A * p_hat * A.t() + Q;
-    //  ROS_INFO("2");
+
       double v = ranges[i] - as_scalar(C * x_hat);
       double s = as_scalar(C * p_hat * C.t()) + 0.03 * 0.03;
 
@@ -102,11 +108,9 @@ void Segment::laserCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
 void Segment::publishBreakPionts() {
   segment_msg.segments.clear();
   for (int i = 0;  i < breakPoint.size(); i++) {
-  segment_msg.segments.push_back(breakPoint[i]);
-  //cout << breakPoint[i] << endl;
-  //cout << segment_msg.segments[i] << endl;
- }
- //cout << "i'm called" << endl;
+    segment_msg.segments.push_back(breakPoint[i]);
+    cout << segment_msg.segments[i] << endl;
+  }
 }
 
 void Segment::publishRanges() {
@@ -130,7 +134,6 @@ void Segment::visualization() {
   points.color.g = 1.0f;
   points.color.a = 1.0;
 
-  //points.lifetime = ros::Duration();
   points.points.clear();
 
   for (int i = 0;  i < breakPoint.size(); i++) {
@@ -139,11 +142,9 @@ void Segment::visualization() {
     p.x = ranges[breakPoint[i]] * cos(angle_min + angle_increment * breakPoint[i]);
     p.y = ranges[breakPoint[i]] * sin(angle_min + angle_increment * breakPoint[i]);
     p.z = 0;
-    //std::cout << breakPoint[i] << std::endl;
-    points.points.push_back(p);
 
-   // The line list needs two points for each line
-   }
+    points.points.push_back(p);
+  }
 }
 
 int main(int argc, char **argv)
@@ -163,8 +164,6 @@ int main(int argc, char **argv)
   ros::Rate loop_rate(10);
 
   while (n.ok()) {
-    //ROS_INFO("I'm here");
-    //pub.publish(segments.fakeScan);
     vis_pub.publish(segments.points);
     pub.publish(segments.segment_msg);
     ros::spinOnce();

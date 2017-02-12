@@ -9,10 +9,11 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   visualization_msgs
+  cmake_modules
 )
-
+find_package(Eigen REQUIRED)
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+# find_package(Eigen REQUIRED COMPONENTS system)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -104,7 +105,7 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES tracker
 #  CATKIN_DEPENDS object_msgs roscpp std_msgs visualization_msgs
-#  DEPENDS system_lib
+   DEPENDS Eigen
 )
 
 ###########
@@ -118,6 +119,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
   include
   tracker
+  ${Eigen_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -140,6 +142,7 @@ include_directories(
 ## Specify libraries to link a library or executable target against
   target_link_libraries(tracker_node
     ${catkin_LIBRARIES}
+    ${Eigen_LIBRARIES}
   )
 
 #############

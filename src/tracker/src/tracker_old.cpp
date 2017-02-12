@@ -24,16 +24,16 @@ KalmanFilter getTrackerEKF() {
   C << 1, 0, 0, 0, 0, 0, 1, 0;
 
        // Reasonable covariance matrices
-  Q <<  0.1, 0, .0, .0,
-       .0, 1, .0, .0,
-       .0, .0, 0. 1, .0,
-       .0, .0, .0, 1;
-  R << 100, 0,
-       0, 100;
-  P << 1, 0, 0, 0,
-       0, 1, 0, 0,
-       0, 0, 1, 0,
-       0, 0, 0, 1;
+  Q << .05*0.05, .05, .0, .0,
+       .0, .05, .0, .0,
+       .0, .0, .05, .05*0.05,
+       .0, .0, .0, .05;
+  R << .01*0.01, .01*0.01/10,
+       .01*0.01/10, 0.01*0.01;
+  P << 100*100.0, 0, 0, 0,
+       0, 10*10, 0, 0,
+       0, 0, 25*25, 0,
+       0, 0, 0, 10*10;
 
   //std::cout << "A: \n" << A << std::endl;
   //std::cout << "C: \n" << C << std::endl;
@@ -101,17 +101,24 @@ void Tracker::addObject(struct Object object) {
 }
 
 void Tracker::updateTracker() {
-  for (int i = 0; i < trackers.size(); i++) {
+  for (int i = 0; i < counters.size(); i++) {
+    if (counters[i] > 50) {
+      deleteObject(i);
+    }
+    else if (counters[i] > 30) {
+      objectList[i].center_x = trackers[i].state()[0];
+      objectList[i].center_y = trackers[i].state()[2];
+    }
     Eigen::VectorXd y(2);
     y << objectList[i].center_x, objectList[i].center_y;
+
     trackers[i].update(y);
     speeds[i].x = trackers[i].state()[1];
     speeds[i].y = trackers[i].state()[3];
     std::cout << "speed.x:" << trackers[i].state()[1]<< std::endl;
     std::cout << "speed.y:" << trackers[i].state()[3] << std::endl;
-    std::cout << "reading.x:" << objectList[i].center_x << std::endl;
+    std::cout << "reading.x:" << objectList[i].center_x<< std::endl;
     std::cout << "reading.y:" << objectList[i].center_y << std::endl;
-    std::cout << "size:" << trackers.size() << std::endl;
   }
 }
 
@@ -119,7 +126,7 @@ void Tracker::addTracker(float x1, float y1) {
 
   KalmanFilter kf = getTrackerEKF();
   Eigen::VectorXd x0(4);
-  x0 << x1, 0, y1, 0;
+  x0 << x1, 0.1, y1, 0.1;
   kf.init(0.1, x0);
 
   trackers.push_back(kf);
@@ -138,23 +145,32 @@ struct searchResult Associator::getGNN(float x, float y) {
   float distance = 100;
   float distanceIt;
   struct searchResult result;
-  std::cout << "here2" <<std::endl;
+  //std::cout << "here2" <<std::endl;
   for(int i = 0; i < tracker.objectList.size(); i++) {
-    std::cout << "here3" << std::endl;
-    std::cout << "tracker.objectList[i].type: " << tracker.objectList[i].type << std::endl;
-    if (tracker.objectList[i].type != 2) continue;
-    std::cout << "here4" << std::endl;
-    distanceIt = sqrt(pow(x - tracker.objectList[i].center_x,2) + pow(y - tracker.objectList[i].center_y,2));
-    std::cout << "distanceIt: " << distanceIt << std::endl;
-    if (distanceIt < distance) {
-      distance = distanceIt;
-      std::cout << "here5" << std::endl;
-      result.idx = i;
-      result.pointType = 1;
+    //std::cout << "here3" << std::endl;
+    if (tracker.objectList[i].type != 1 | tracker.objectList[i].type != 2) continue;
+      distanceIt = sqrt(pow(x - tracker.objectList[i].center_x,2) + pow(y - tracker.objectList[i].center_y,2));
+      if (distanceIt < distance) {
+        distance = distanceIt;
+        result.idx = i;
+        result.pointType = 1;
+      }
+      if (tracker.objectList[i].type == 2) {
+        distanceIt = sqrt(pow(x - tracker.objectList[i].edge1_x,2) + pow(y - tracker.objectList[i].edge1_y,2));
+        if (distanceIt < distance) {
+          distance = distanceIt;
+          result.idx = i;
+          result.pointType = 2;
+        }
+        distanceIt = sqrt(pow(x - tracker.objectList[i].edge2_x,2) + pow(y - tracker.objectList[i].edge2_y,2));
+        if (distanceIt < distance) {
+          distance = distanceIt;
+          result.idx = i;
+          result.pointType = 3;
+        }
+      }
     }
-    }
-    std::cout << "distance: " << distance << std::endl;
-    if (distance < 0.5) {
+    if (distance < 0.2) {
       result.newObject = false;
     } else {
       result.newObject = true;
@@ -168,20 +184,42 @@ void Associator::objectCallback(const object_msgs::object_msgs::ConstPtr& msg) {
   struct Object objectIt;
   //std::cout << "here" << std::endl;
   for(int i = 0; i < msg->types.size(); i++) {
-    if (msg->types[i] == 2) {
+    if (msg->types[i] == 10) {
       result = getGNN(msg->center_x[i], msg->center_y[i]);
+    }
+    else {
+      result = getGNN(msg->center_x[i], msg->center_y[i]);
+      if (result.newObject) {
+      result = getGNN(msg->edge1_x[i], msg->edge1_y[i]);
+      }
+      if (result.newObject) {
+      result = getGNN(msg->edge2_x[i], msg->edge2_y[i]);
+      }
     }
     if (result.newObject) {
       objectIt.type = msg->types[i];
       objectIt.center_x = msg->center_x[i];
       objectIt.center_y = msg->center_y[i];
-      std::cout << "objectAdded" << std::endl;
+      if (msg->types[i] == 2) {
+        objectIt.edge1_x = msg->edge1_x[i];
+        objectIt.edge1_y = msg->edge1_y[i];
+        objectIt.edge2_x = msg->edge2_x[i];
+        objectIt.edge2_y = msg->edge2_y[i];
+      }
       tracker.addObject(objectIt);
     }
     else {
+      tracker.objectList[result.idx].type = msg->types[i];
       tracker.objectList[result.idx].center_x = msg->center_x[i];
       tracker.objectList[result.idx].center_y = msg->center_y[i];
-        }
+      if (msg->types[i] == 2) {
+        tracker.objectList[result.idx].edge1_x = msg->edge1_x[i];
+        tracker.objectList[result.idx].edge1_y = msg->edge1_y[i];
+        tracker.objectList[result.idx].edge2_x = msg->edge2_x[i];
+        tracker.objectList[result.idx].edge2_y = msg->edge2_y[i];
+      }
+      tracker.addObject(objectIt);
+    }
   }
   tracker.updateTracker();
   //for (int i = 0; i < tracker.objectList.size(); i++)
